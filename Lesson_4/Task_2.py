@@ -1,8 +1,22 @@
-# 1. Задайте строку из набора чисел. Напишите программу,
-#    которая покажет большее и меньшее число.
-#    В качестве символа-разделителя используйте пробел.
+# 2. Найдите корни квадратного уравнения Ax² + Bx + C = 0,
+#    с помощью дополнительных библиотек python. Запросите значения А, В, С 3 раза.
+#    Уравнения и корни запишите в файл.
 
-line = input()
-list_1 = [int(x.strip(',.*:;')) for x in line.split() if x.isdigit()]
-print(f'Min: {min(list_1)}')
-print(f'Max: {max(list_1)}')
+from math import sqrt
+def squart_root(a, b, c):
+    discr = b ** 2 - 4 * a * c
+    if a == 0:
+        return print('Error')
+    with open('Result.txt', 'a', encoding='utf-8') as my_f:
+        my_f.write(f'({a}x²) + ({b}x) + ({c}) = 0\n')
+        if discr > 0:
+            my_f.write(f'{(-b + sqrt(discr)) / (2 * a)}\n')
+            my_f.write(f'{(-b - sqrt(discr)) / (2 * a)}\n')
+        elif discr == 0:
+            my_f.write(f'{-b / (2 * a)}\n')
+        else:
+            my_f.write('No roots')
+
+for i in range(3):
+    squart_root(int(input("Write a: ")), int(input("Write b: ")), int(input("Write c: ")))
+    print()
