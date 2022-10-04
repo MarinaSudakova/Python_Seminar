@@ -1,13 +1,15 @@
 # Задайте число. Составьте список чисел Фибоначчи, в том числе для отрицательных индексов.
 
-def negafibo(number):
-    fibonachi = [-1, 1, 0, 1, 1]
-    for i in range(1, number+1):
-        fibonachi.append(i + fibonachi[i+2])
+def neg_fib(num: int):
+    a, b = 1, 1
+    list_nums = [0]
 
-    return fibonachi
-   
+    for i in range(num):
+        list_nums.append(a)
+        list_nums.insert(0, a * (-1) ** i)
+        a, b = b, b + a
+
+    return list_nums
 
 
-a = int(input('Write a number: '))
-print(f'{a} --> {negafibo(a)}')
+print(*neg_fib(int(input())))
