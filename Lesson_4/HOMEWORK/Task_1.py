@@ -16,14 +16,14 @@ def primfacs(n):
     return primfac
 
 
-print(primfacs(999999990))
+print(primfacs(999999999990))
 print(time() - start)
 
 # Задайте натуральное число N.
 # Напишите программу, которая составит список простых множителей числа N.
 
 start = time()
-prime_numbers = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 73, 101, 137]
+prime_numbers = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 73, 101, 137, 21649, 513239]
 
 
 def factors(num, prime_numbers):
@@ -49,5 +49,5 @@ def factors(num, prime_numbers):
                 
     return list_factors
 
-print(factors(999999990, prime_numbers))
+print(factors(999999999990, prime_numbers))
 print(time() - start)
