@@ -17,7 +17,7 @@ def equation (degree: int):
     if degree < 1:
         print('Error')
     my_list = range(degree, 1, -1)
-    with open ('Equation.txt', 'a', encoding='utf-8') as my_f:
+    with open ('Equation1.txt', 'a', encoding='utf-8') as my_f:
         for i in my_list:
             r = randint(0, 10)
             ch = choice('+-')
