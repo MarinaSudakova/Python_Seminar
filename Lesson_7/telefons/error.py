@@ -1,4 +1,5 @@
 
+
 import logg
 import convert
 
@@ -20,6 +21,8 @@ def make_choise(min: int, max: int):
 def error_name(what: str):
     try:
         name = (input('Введите {}: '.format(what)))
+        if not name:
+            raise ValueError
     except ValueError:
         print('Это не текст. Попробуйте снова')
         logg.error_enter()
@@ -68,5 +71,3 @@ def file_exist(name: str):
         print('Файла не существует. Начните заново')
         logg.error_enter()
         
-
-error_phone('name')

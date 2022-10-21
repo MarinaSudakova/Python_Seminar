@@ -45,5 +45,3 @@ def start():
             print('До скорых встреч!')
             quit()
 
-
-start()

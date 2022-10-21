@@ -4,5 +4,3 @@ def show_data():
         reader = csv.reader(File)
         for row in reader:
             print(row)
-
-show_data()

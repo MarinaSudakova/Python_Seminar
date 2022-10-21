@@ -1,0 +1,3 @@
+import userinterface
+
+userinterface.start()
