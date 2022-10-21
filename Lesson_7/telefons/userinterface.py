@@ -40,6 +40,7 @@ def start():
             logg.next_step()
             d = error.file_name()
             error.file_exist(d)
+            logg.convert()
 
         if token == 0:
             print('До скорых встреч!')
