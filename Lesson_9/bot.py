@@ -53,21 +53,6 @@ def gender(update, _):
     # переходим к этапу `PHOTO`
     return SIGN
 
-# # Обрабатываем пол пользователя
-# def gender(update, _):
-#     # определяем пользователя
-#     user = update.message.from_user
-#     # Пишем в журнал пол пользователя
-#     logger.info("Пол %s: %s", user.first_name, update.message.text)
-#     # Следующее сообщение с удалением клавиатуры `ReplyKeyboardRemove`
-#     update.message.reply_text(
-#         'Хорошо. Пришли мне свою фотографию, чтоб я знал как ты '
-#         'выглядишь, или отправь /skip, если стесняешься.',
-#         reply_markup=ReplyKeyboardRemove(),
-#     )
-#     # переходим к этапу `PHOTO`
-#     return SIGN
-
 def sign(update, _):
     user = update.message.from_user
     logger.info("Знак зодиака %s: %s", user.first_name, update.message.text)
@@ -168,7 +153,7 @@ def cancel(update, _):
 
 if __name__ == '__main__':
     # Создаем Updater и передаем ему токен вашего бота.
-    updater = Updater("5643455762:AAETbjdCP2dp7dampMiZseoXQ_VmbG58UXg")
+    updater = Updater("")
     # получаем диспетчера для регистрации обработчиков
     dispatcher = updater.dispatcher
 
